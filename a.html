@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioWiz - Your Trusted Partner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .hero-header {
+            background: #87d37c;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom-left-radius: 50% 10%;
+            border-bottom-right-radius: 50% 10%;
+            position: relative;
+            background-image: url('');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-header .hero-content h1 {
+            font-size: 4rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .hero-header .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-header .btn.secondary {
+            background: #fff;
+            color: #4caf50;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .hero-header .btn.secondary:hover {
+            background: #4caf50;
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.1);
+        }
+
+        .about {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            border-top-left-radius: 50% 10%;
+            border-top-right-radius: 50% 10%;
+        }
+
+        .about .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4caf50;
+            position: relative;
+        }
+
+        .about .about-content {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .about .about-image {
+            width: 40%;
+            border-radius: 15px;
+            object-fit: cover;
+            height: 300px;
+        }
+
+        .about .about-content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+            width: 45%;
+        }
+
+        .services {
+            padding: 60px 20px;
+            background: linear-gradient(to bottom, #87d37c, #fff);
+        }
+
+        .services .section-header h2 {
+            font-size: 2.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        .service-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-top: 15px;
+            color: #4caf50;
+        }
+
+        /* Form Section */
+        .contact-form {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+        }
+
+        .contact-form h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4caf50;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .contact-form button {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background: #4caf50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .about .about-content {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 45%;
+            }
+
+            .contact-form {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                width: 90%;
+            }
+
+            .hero-header .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-header .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-header">
+        <div class="hero-content">
+            <h1>Welcome to BioWiz</h1>
+            <p>Your Trusted Partner in Biological and Environmental Solutions</p>
+            <a href="#services" class="btn secondary">Explore Our Services</a>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>About Us</h2>
+        </div>
+        <div class="about-content">
+            <img src="" alt="About BioWiz" class="about-image">
+            <p>BioWiz provides sustainable solutions to biological and environmental challenges. We specialize in innovative strategies that lead to a greener, healthier future.</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+        </div>
+        <div class="service-cards">
+            <div class="card">
+                <img src="" alt="Service 1" class="service-image">
+                <h3>Biological Research</h3>
+                <p>In-depth research on biological systems to develop new solutions for healthcare and environmental sustainability.</p>
+            </div>
+            <div class="card">
+                <img src="" alt="Service 2" class="service-image">
+                <h3>Environmental Solutions</h3>
+                <p>Innovative solutions to environmental challenges, focusing on reducing pollution and promoting sustainability.</p>
+            </div>
+            <div class="card">
+                <img src="" alt="Service 3" class="service-image">
+                <h3>Consulting</h3>
+                <p>Expert consulting services in environmental management, sustainability, and biological innovations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form" id="contact">
+        <h2>Get in Touch</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 BioWiz. All Rights        <p>&copy; 2024 BioWiz. All Rights Reserved.</p>
+    </footer>
+<script>
+  // Pexels API Key
+const apiKey = "zCfeAFHAU9x46hh40Gonl6WxDWwa74v4UPM59L8ATNir1tv57g6BrrXP";
+
+// Correct URLs for each service image
+const imageURLs = [
+    "https://api.pexels.com/v1/search?query=biological&per_page=1",   // Hero background image
+    "https://api.pexels.com/v1/search?query=environment&per_page=1",  // About section image
+    "https://api.pexels.com/v1/search?query=consulting&per_page=1",   // Service 1 image
+    "https://api.pexels.com/v1/search?query=science&per_page=1",      // Service 2 image
+    "https://api.pexels.com/v1/search?query=sustainability&per_page=1" // Service 3 image
+];
+
+// Fetch the background image for the hero section
+fetchImage('hero-header', 'background', imageURLs[0]);
+
+// Fetch the about section image
+fetchImage('about-image', 'about-image', imageURLs[1]);
+
+// Fetch the service images
+const serviceImages = document.querySelectorAll('.service-image');
+fetchImageForService(serviceImages, imageURLs);
+
+// Function to fetch and set images from the Pexels API
+function fetchImage(imageClass, imageType, url) {
+    fetch(url, {
+        headers: {
+            'Authorization': apiKey
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Check if the response contains photos
+        const imageUrl = data.photos && data.photos[0]?.src?.medium;
+        if (imageUrl) {
+            if (imageType === 'background') {
+                // Set background image for hero-header
+                document.querySelector(`.${imageClass}`).style.backgroundImage = `url(${imageUrl})`;
+            } else {
+                // Set image source for about and service sections
+                document.querySelector(`.${imageClass}`).src = imageUrl;
+            }
+        } else {
+            console.error('No images found for', imageClass);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching images:', error);
+    });
+}
+
+// Function to fetch images for each service card
+function fetchImageForService(serviceImages, urls) {
+    serviceImages.forEach((image, index) => {
+        fetchImage(image.className, 'image', urls[index + 2]); // Service images start at index 2
+    });
+}
+
+</script>
+}
+   
+</body>
+</html>
+
+        
